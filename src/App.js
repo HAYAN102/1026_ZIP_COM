@@ -1,8 +1,8 @@
 import "antd/dist/antd.css";
+import MainPageComponent from "./main/index.js";
 import React from "react";
 import "./App.css";
-import { Button } from "antd";
-import { UploadOutlined } from "@ant-design/icons";
+
 import {
   useHistory,
   Link,
@@ -21,20 +21,11 @@ function App() {
           <span>쟈쟌~~~~</span>
         </div>
       </Link>
-      <div id="uploadButton">
-        <Button
-          type="primary"
-          ghost
-          onClick={() => {
-            history.push("/upload");
-          }}
-          icon={<UploadOutlined />}
-        >
-          이미지 업로드 하기
-        </Button>
-      </div>
 
       <Switch>
+        <Route exact={true} path="/">
+          <MainPageComponent />
+        </Route>
         <Route exact={true} path="/upload">
           <UploadPage />
         </Route>
