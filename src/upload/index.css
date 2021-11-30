@@ -2,3 +2,12 @@
   font-size: 18px;
   width: 80px;
 }
+
+#upload {
+  width: 800px;
+}
+
+#upload-button {
+  display: flex;
+  justify-content: flex-end;
+}
